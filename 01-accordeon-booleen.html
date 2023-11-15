@@ -1,12 +1,65 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" >
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon avec des booléens</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <h1>Accordéon avec des booléens</h1>
+    <div class="accordeon">
+      <section x-data="{menuIsOpen: false}">
+        <button 
+        aria-controls="button 1"
+        @click="menuIsOpen = ! menuIsOpen"
+        class="header_menuBtn">
+      bouton 1
+        </button>
+        <nav id="button 1"
+        x-show="menuIsOpen"
+        x-transition.duration.300ms
+        class="menu">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Molestiae, numquam expedita. Maiores itaque laboriosam numquam, 
+          voluptates commodi rerum voluptatem distinctio minus, tenetur eius, 
+          non soluta laborum dolorem totam et dolores.</p>
+        </nav>
+      </section>
+      <section x-data="{menuIsOpen: false}">
+        <button
+        aria-controls="button 2"
+        @click="menuIsOpen = ! menuIsOpen"
+        class="header_menuBtn"
+        >
+          bouton 2
+        </button>
+        <nav id="button 2"
+        x-show="menuIsOpen"
+        x-transition.duration.300ms
+        class="menu">
+        <p>Magni iusto atque blanditiis soluta illo ducimus dolores voluptatum libero, 
+          quam rerum aliquam necessitatibus, at id, excepturi eius vitae tenetur
+           et facere voluptas itaque voluptates? Eaque voluptate rem magni totam!</p>
+        </nav>
+      </section>
+      <section x-data="{menuIsOpen: false}">
+        <button
+        aria-controls="button 3"
+        @click="menuIsOpen = ! menuIsOpen"
+        class="header_menuBtn"
+        >
+          bouton 3
+        </button>
+        <nav id="button 3"
+        x-show="menuIsOpen"
+        x-transition.duration.300ms>
+        <p>Aut dolorem hic nostrum ipsum corrupti fugit eius repudiandae, exercitationem 
+          dolore ut. Cupiditate, doloremque doloribus? Ea, quis eveniet sapiente consequuntur 
+          libero at voluptates vitae sequi quos consectetur blanditiis laboriosam minima?</p>
+        </nav>
+      </section>
+    </div>
   </body>
 </html>
