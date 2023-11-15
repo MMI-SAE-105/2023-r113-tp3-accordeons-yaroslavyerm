@@ -7,6 +7,14 @@
     <title>Accordéon avec x-collapse</title>
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+    .ouvert{
+      background: rgb(231, 255, 194);
+      color: green;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      border: 1px solid green;
+    }
+    </style>
   </head>
   <body>
     <h1>Accordéon avec <code>x-collapse</code></h1>
@@ -14,7 +22,8 @@
       <section>
         <button aria-controls="button 1" 
         @click="menuIsOpen = 1" 
-        class="header_menuBtn">
+        class="header_menuBtn"
+        :class="{ouvert:menuIsOpen === 1,}">
           bouton 1
         </button>
         <nav id="button 1" 
@@ -30,7 +39,8 @@
       <section>
         <button aria-controls="button 2" 
         @click="menuIsOpen = 2" 
-        class="header_menuBtn">
+        class="header_menuBtn"
+        :class="{ouvert:menuIsOpen === 2,}">
           bouton 2
         </button>
         <nav id="button 2" 
@@ -45,7 +55,8 @@
       <section>
         <button aria-controls="button 3" 
         @click="menuIsOpen = 3" 
-        class="header_menuBtn">
+        class="header_menuBtn"
+        :class="{ouvert:menuIsOpen === 3,}">
           bouton 3
         </button>
         <nav id="button 3" 
