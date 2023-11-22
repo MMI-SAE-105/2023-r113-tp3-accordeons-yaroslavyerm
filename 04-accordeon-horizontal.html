@@ -15,7 +15,7 @@
       #accordeon li{
         width: 107px;
         overflow: hidden;
-        transition: width;
+        transition: width 1s;
         background-color: #eee;
         list-style: none;
         margin: 3px;
@@ -45,8 +45,12 @@
   </head>
   <body>
     <h1>Accordéon horizontal</h1>
-    <ul id="accordeon">
-      <li>
+    <ul id="accordeon" x-data="{isOpen:0}">
+      <li 
+      aria-controls="li1"
+      @click="isOpen = 1"
+      :class="{actif:isOpen === 1}"
+      >
         <figure >
           <img src="https://picsum.photos/100?random=1" alt="" width="102">
           <figcaption>
@@ -55,7 +59,11 @@
           </figcaption>
         </figure>
       </li>
-      <li class="actif">
+      <li 
+      aria-controls="li2"
+      @click="isOpen = 2"
+      :class="{actif:isOpen === 2}"
+      >
         <figure >
           <img src="https://picsum.photos/100?random=2" alt="" width="102">
           <figcaption>
@@ -64,7 +72,11 @@
           </figcaption>
         </figure>
       </li>
-      <li>
+      <li
+      aria-controls="li3"
+      @click="isOpen = 3"
+      :class="{actif:isOpen === 3}"
+      >
         <figure>
           <img src="https://picsum.photos/100?random=3" alt="" width="102">
           <figcaption>
