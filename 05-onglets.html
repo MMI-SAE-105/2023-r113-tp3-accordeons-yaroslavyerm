@@ -11,9 +11,15 @@
     <h1>Onglets</h1>
     <div id="onglets" x-data="{isOpen : 1,}">
     <ul role="tablist">
-      <li role="tab">Onglet 1</li>
-      <li role="tab" class="actif">Onglet 2</li>
-      <li role="tab">Onglet 3</li>
+      <li role="tab"
+      @click="isOpen = 1"
+      >Onglet 1</li>
+      <li role="tab"
+      @click="isOpen = 2"
+      >Onglet 2</li>
+      <li role="tab"
+      @click="isOpen = 3"
+      >Onglet 3</li>
     </ul>
     <div>
       <div role="tabpanel" :class="{actif:isOpen === 1,}">
