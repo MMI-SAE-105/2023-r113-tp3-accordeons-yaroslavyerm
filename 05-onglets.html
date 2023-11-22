@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Onglets</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <h1>Onglets</h1>
+    <div id="onglets" x-data="{
+     ouvert : 1,
+    }">
     <ul role="tablist">
       <li role="tab">Onglet 1</li>
       <li role="tab" class="actif">Onglet 2</li>
       <li role="tab">Onglet 3</li>
     </ul>
+    </div>
   </body>
 </html>
