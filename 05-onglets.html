@@ -16,15 +16,15 @@
       <li role="tab">Onglet 3</li>
     </ul>
     <div>
-      <div role="tabpanel" x-show="isOpen === 1">
+      <div role="tabpanel" :class="{actif:isOpen === 1,}">
         <h1>Panneau 1</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eius vitae error sed quasi porro velit, vero ad quo voluptate perspiciatis ducimus cumque deleniti harum neque, labore, nesciunt totam mollitia?</p>
       </div>
-      <div role="tabpanel" x-show="isOpen === 2">
+      <div role="tabpanel" :class="{actif:isOpen === 2,}">
         <h1>Panneau 2</h1>
         <p>Soluta commodi, voluptatem iusto itaque inventore dignissimos vero ipsa possimus asperiores laborum dicta expedita, quae iure quo odio repellat autem dolorem libero, quod sint eos sit. Consequuntur, labore aut? Repellat.</p>
       </div>
-      <div role="tabpanel" x-show="isOpen === 3">
+      <div role="tabpanel" :class="{actif:isOpen === 3}">
         <h1>Panneau 3</h1>
         <p>Atque, laudantium id. Facilis quidem, facere, exercitationem eum harum quae sunt sint id excepturi ipsum magni dolores est doloremque vitae nobis numquam minima aliquid repudiandae provident ut minus officiis assumenda.</p>
       </div>
