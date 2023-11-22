@@ -5,6 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Onglets</title>
+    <style>
+        .panneaux{
+          position: relative;
+        }
+        .panneaux > div{
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: opacity 1s;
+        }
+        .panneaux > div.actif{
+          opacity: 1;
+        }
+    </style>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
@@ -13,15 +28,18 @@
     <ul role="tablist">
       <li role="tab"
       @click="isOpen = 1"
+      :class="{actif:isOpen === 1,}"
       >Onglet 1</li>
       <li role="tab"
       @click="isOpen = 2"
+      :class="{actif:isOpen === 2,}"
       >Onglet 2</li>
       <li role="tab"
       @click="isOpen = 3"
+      :class="{actif:isOpen === 3,}"
       >Onglet 3</li>
     </ul>
-    <div>
+    <div class="panneaux">
       <div role="tabpanel" :class="{actif:isOpen === 1,}">
         <h1>Panneau 1</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eius vitae error sed quasi porro velit, vero ad quo voluptate perspiciatis ducimus cumque deleniti harum neque, labore, nesciunt totam mollitia?</p>
